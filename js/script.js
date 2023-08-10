@@ -1,15 +1,8 @@
-let size = 8;
-let board = "";
-
-for (let y = 0; y < size; y++) {
-  for (let x = 0; x < size; x++) {
-    if ((x + y) % 2 == 0) {
-      board += "#";
-    } else {
-      board += " ";
-    }
-  }
-  board += "\n";
+const power = function(base, exponent){
+	let result = 1;
+	for (let count = 0; count < exponent; count++){
+		result *= base;
+	}
+	return result;
 }
-
-console.log(board);
+console.log(power(2,6))
