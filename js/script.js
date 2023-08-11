@@ -1,6 +1,17 @@
-function multiplier(factor){
-    return number => number * factor;
+function power1(base, exponent){
+    if(exponent == 0){
+        return 1;
+    }else{
+        return base * power1(base, exponent - 1); 
+    }
 }
+console.log(power1(2,3))
 
-let twice = multiplier(10);
-console.log(twice(10));
+function power2(base, exponent){
+    let result = 1;
+    for (let count = 0; count < exponent; count++){
+        result *= base;
+    }
+    return result;
+}
+console.log(power2(2,3));
