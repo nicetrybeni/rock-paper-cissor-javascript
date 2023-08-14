@@ -1,13 +1,13 @@
-function findSolution(target){
-    function find(current, history){
-        if(current==target){
-            return history;
-        }else if (current > target){
-            return null;
-        }else{
-            return find(current + 5, `(${history} +5)`) || find(current * 3, `(${history} *3)`);
-        }
+function printFarmInventory(cows, chickens){
+    let cowString = String(cows);
+    while (cowString.length < 3){
+        cowString = "0"+ cowString;
     }
-    return find(1,"1");
+    console.log(`${cowString} Cows`);
+    let chickensString = String(chickens);
+    while (chickensString.length <3){
+        chickensString = "0"+ chickensString;
+    }
+    console.log(`${chickensString} Chickens`);
 }
-console.log(findSolution(24));
+printFarmInventory(7,11);
