@@ -1,10 +1,13 @@
-// Define F to hold a function value 
-const f = function(a){
-    console.log(a+2);
+function countChar(string, ch){
+    let counted = 0;
+    for(let i = 0; i < string.length; i++){
+        if(string[i] == ch){
+            counted += 1;
+        }
+    }
+    return counted;
 }
-// Declare g to be a function 
-function g(a,b){
-    return a * b * 3.5;
+function countBs(string){
+    return countChar(string,"B")
 }
-// A less verbose function value
-let h = a => a % 3; 
+console.log(countBs("BIBEKO"));
